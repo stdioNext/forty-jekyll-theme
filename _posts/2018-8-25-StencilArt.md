@@ -1,6 +1,6 @@
 ---
 title: Stencil Art - Journal Guide 
-layout: landing
+layout: post
 description: 'Stencil provides guide lines for your amazing journals. <br />With badges and line art your journals would be more artistic and inspirational.'
 image: assets/images/stencilBanner.jpg
 nav-menu: false

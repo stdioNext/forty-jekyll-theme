@@ -75,9 +75,9 @@ nav-menu: true
 <section id="three">
 	<div class="inner">
 		<header class="major">
-			<h2>Massa libero</h2>
+			<h2>Why we care about Art!</h2>
 		</header>
-		<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+		<p>All the art pieces in the history has only one thing in common, uniqeness of their existence. And as a human all we need a token of uniqueness which symbolizes our individuality and creativity. Fortunatelly with all the technological advancements gave us opportunity to display our differences and uniquness to the world. <br />Our aim is to be part of it and help people to show their differences with artisctic way.</p>
 		<ul class="actions">
 			<li><a href="generic.html" class="button next">Projects</a></li>
 		</ul>
