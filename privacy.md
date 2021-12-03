@@ -1,4 +1,4 @@
----
+<!-- ---
 title: Stencil Art - Journal Guide 
 layout: landing
 description: 'Stencil provides guide lines for your amazing journals. <br />With badges and line art your journals would be more artistic and inspirational.'
@@ -22,4 +22,4 @@ nav-menu: false
 		</p>
 		<img src="assets/images/stencilAppstore.png" alt="" />
 	</div>
-</section>
+</section> -->

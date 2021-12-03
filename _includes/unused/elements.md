@@ -361,7 +361,9 @@ Finally, this is a <a href="#">link</a>.</p>
 <h3>Image</h3>
 
 <h4>Fit</h4>
+<div class="10u">
 <span class="image fit"><img src="{% link assets/images/pic03.jpg %}" alt="" /></span>
+</div>
 <div class="box alt">
 	<div class="row 50% uniform">
 		<div class="4u"><span class="image fit"><img src="{% link assets/images/pic08.jpg %}" alt="" /></span></div>

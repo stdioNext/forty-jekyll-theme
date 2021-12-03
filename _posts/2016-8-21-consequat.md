@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: landing
 title: Consequat
 description: Ipsum dolor sit amet
 image: assets/images/pic05.jpg
