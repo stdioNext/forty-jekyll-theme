@@ -23,8 +23,8 @@ nav-menu: true
 		<a href="https://apps.apple.com/us/app/stencil-journal-guide/id1553707162" class="image" style="width:200px">
 			<img src="{% link assets/images/appstoreDownload.png %}" alt="" data-position="25% 25%"/> 
 		</a>
-		<a href="#" class="image" style="width:200px">
-			<img src="{% link assets/images/playstoreDownload.png %}" alt="Coming Soon!" data-position="25% 25%"/> 
+		<a href="https://play.google.com/store/apps/details?id=com.StudioNext.stencil2" class="image" style="width:200px">
+			<img src="{% link assets/images/playstoreDownload.png %}" alt="Android" data-position="25% 25%"/> 
 		</a>
 
 	</div>
