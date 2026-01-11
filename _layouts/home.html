@@ -1,55 +1,266 @@
 <!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
+<head>
+    <title>{{ site.title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description }}" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-{% include head.html %}
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        ::selection {
+            background: #000;
+            color: #fff;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 2px solid #000;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 3rem 0;
+            border-bottom: 3px solid #000;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 8rem 0;
+            border-bottom: 3px solid #000;
+        }
+
+        .hero h2 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            color: #333;
+        }
+
+        /* Section */
+        section {
+            padding: 6rem 0;
+            border-bottom: 3px solid #000;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            color: #666;
+        }
+
+        /* App Card */
+        .app {
+            margin-bottom: 5rem;
+        }
+
+        .app:last-child {
+            margin-bottom: 0;
+        }
+
+        .app h3 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .app-status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.8rem;
+            border: 2px solid #000;
+            margin-bottom: 1.5rem;
+        }
+
+        .app-status.live {
+            background: #000;
+            color: #fff;
+        }
+
+        .app p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            max-width: 650px;
+        }
+
+        .app-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .app-features li {
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .app-features li:last-child {
+            border-bottom: none;
+        }
+
+        .store-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .store-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #000;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            border: 3px solid #000;
+            border-bottom: 3px solid #000;
+            transition: all 0.2s;
+        }
+
+        .store-link:hover {
+            background: #fff;
+            color: #000;
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            background: #000;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 5rem 0;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
 <body>
 
-    {% include header.html %}
-
-    <!-- Banner -->
-    <section id="banner" class="major">
-        <div class="inner">
-            <header class="major">
-                <h1>{{ page.landing-title }}</h1>
-            </header>
-            <div class="content">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
-                <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Projects</a></li>
-                </ul>
-            </div>
+    <header>
+        <div class="container">
+            <h1>{{ site.title }}</h1>
         </div>
-    </section>
+    </header>
 
-    <!-- Main -->
-    <div id="main">
-
-        <!-- One -->
-        {% include tiles.html %}
-
-        <!-- Two -->
-        <section id="two">
-            <div class="inner">
-                <header class="major">
-                    <h2>Why we care about Art!</h2>
-                </header>
-                <p>{{ content }}</p>
-                <ul class="actions">
-                    <!-- <li><a href="landing.html" class="button next">Get Started</a></li> -->
-                </ul>
-            </div>
-        </section>
-
+    <div class="hero">
+        <div class="container">
+            <h2>{{ page.landing-title }}</h2>
+            <p>{{ site.description | strip_html }}</p>
+        </div>
     </div>
 
-    {% include footer.html %}
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                {% if site.youtube_url %}<a href="{{ site.youtube_url }}" target="_blank">YouTube</a>{% endif %}
+                {% if site.tiktok_url %}<a href="{{ site.tiktok_url }}" target="_blank">TikTok</a>{% endif %}
+                {% if site.instagram_url %}<a href="{{ site.instagram_url }}" target="_blank">Instagram</a>{% endif %}
+                {% if site.github_url %}<a href="{{ site.github_url }}" target="_blank">GitHub</a>{% endif %}
+            </div>
+            <p class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+        </div>
+    </footer>
 
 </body>
-
 </html>

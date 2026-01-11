@@ -1,34 +1,17 @@
 # site settings
 title: Studio Next
-subtitle: Inspiring Art Products
+subtitle: Mobile Apps
 email: mert@studionext.co.uk
-formspree-action: https://formspree.io/f/mvovqleg
-description: Studio Next is a London-based software development studio <br />that aims to help artists and promote art with its software products.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+description: Building thoughtful mobile apps for mindful living. Meditation, journaling, and creative expression.
+baseurl: ""
+url:
 author:
-street_address: 68B Gascony Avenue 
-city: London
-state: 
-zip_code: NW6 4NE
-country: United Kingdom
-phone: +44 7796 486210
-
-# homepage tiles
-tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 6
 
 # social settings
-500px_url:
-facebook_url:
-github_url: https://github.com/stdionext
-gitlab_url:
-googleplus_url:
-instagram_url: https://instagram.com/stdionext
-linkedin_url: https://www.linkedin.com/in/mertnesvat
-pinterest_url:
-slack_url:
-twitter_url: https://twitter.com/mertnesvat
+github_url: https://github.com/mertnesvat/
+instagram_url: https://www.instagram.com/mertmakesstuff/
+youtube_url: https://www.youtube.com/@mnesvat/shorts
+tiktok_url: https://www.tiktok.com/@mertbuilds
 
 # build settings
 markdown: kramdown

@@ -1,11 +1,53 @@
 ---
 layout: home
 title: Home
-landing-title: 'Next Generation of Art!'
-description: null
-image: null
-author: null
-show_tile: false
+landing-title: 'Mobile Apps for Mindful Living'
 ---
 
-All the art pieces in the history has only one thing in common, uniqeness of their existence. And as a human all we need a token of uniqueness which symbolizes our individuality and creativity. Fortunatelly with all the technological advancements gave us opportunity to display our differences and uniquness to the world. <br />Our aim is to be part of it and help people to show their differences with artisctic way.
+<section>
+    <div class="container">
+        <p class="section-title">Our Apps</p>
+
+        <div class="app">
+            <h3>Meditation Village</h3>
+            <span class="app-status live">Available Now</span>
+            <p>Grow your Vipassana meditation practice into a tree. A mindful app that transforms your daily meditation into a growing tree. Track streaks, join communities, and watch your practice flourish.</p>
+            <ul class="app-features">
+                <li>Watch your tree grow through 10 beautiful phases as you meditate</li>
+                <li>Build and track daily meditation streaks</li>
+                <li>Join communities and meditate alongside others</li>
+                <li>Guided sessions including Anapana, Vipassana, and Goenka-style</li>
+                <li>Detailed analytics of your meditation journey</li>
+                <li>Gentle reminders to maintain your practice</li>
+            </ul>
+            <div class="store-links">
+                <a href="https://apps.apple.com/app/meditation-village/id6670164638" class="store-link">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.studionext.meditationvillage" class="store-link">Google Play</a>
+            </div>
+        </div>
+
+        <div class="app">
+            <h3>Socratic</h3>
+            <span class="app-status">Coming Soon</span>
+            <p>Most teachers give you answers. Socrates did the opposite. He only asked questions. And somehow that worked better.</p>
+            <p>Not a chat. Not a journal. An app that asks you questions like Socrates would. It doesn't give opinions. It finds contradictions in your thinking. It waits for you to sit with the question. And at the end, you write the conclusion. Not the AI.</p>
+            <ul class="app-features">
+                <li>AI-powered Socratic questioning method</li>
+                <li>Finds contradictions in your thinking</li>
+                <li>No opinions, only questions</li>
+                <li>You write the final conclusion</li>
+            </ul>
+        </div>
+
+        <div class="app">
+            <h3>Stencil Journal</h3>
+            <span class="app-status">Archive</span>
+            <p>A drawing journal app that helped users express themselves through artistic sketches and stencils. A creative space for visual journaling.</p>
+            <div class="store-links">
+                <a href="https://apps.apple.com/us/app/stencil-draw-with-guidelines/id1553707162" class="store-link">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.StudioNext.stencil" class="store-link">Google Play</a>
+            </div>
+        </div>
+
+    </div>
+</section>
