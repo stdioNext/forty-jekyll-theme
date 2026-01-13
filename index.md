@@ -28,7 +28,7 @@ landing-title: 'Mobile Apps for Mindful Living'
 
         <div class="app">
             <h3>Socratic</h3>
-            <span class="app-status">Coming Soon</span>
+            <span class="app-status beta">Beta</span>
             <p>Most teachers give you answers. Socrates did the opposite. He only asked questions. And somehow that worked better.</p>
             <p>Not a chat. Not a journal. An app that asks you questions like Socrates would. It doesn't give opinions. It finds contradictions in your thinking. It waits for you to sit with the question. And at the end, you write the conclusion. Not the AI.</p>
             <ul class="app-features">
@@ -37,6 +37,9 @@ landing-title: 'Mobile Apps for Mindful Living'
                 <li>No opinions, only questions</li>
                 <li>You write the final conclusion</li>
             </ul>
+            <div class="store-links">
+                <a href="https://testflight.apple.com/join/2qdfzGtT" class="store-link">TestFlight</a>
+            </div>
         </div>
 
         <div class="app">
