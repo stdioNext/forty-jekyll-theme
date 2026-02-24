@@ -91,6 +91,22 @@
             color: #333;
         }
 
+        .hero-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+        }
+
+        .hero-links a {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+            padding-bottom: 0.15rem;
+        }
+
         /* Section */
         section {
             padding: 6rem 0;
@@ -281,6 +297,14 @@
         <div class="container">
             <h2>{{ page.landing-title }}</h2>
             <p>{{ site.description | strip_html }}</p>
+            <div class="hero-links">
+                {% if site.youtube_url %}<a href="{{ site.youtube_url }}" target="_blank">YouTube</a>{% endif %}
+                {% if site.tiktok_url %}<a href="{{ site.tiktok_url }}" target="_blank">TikTok</a>{% endif %}
+                {% if site.instagram_url %}<a href="{{ site.instagram_url }}" target="_blank">Instagram</a>{% endif %}
+                {% if site.github_url %}<a href="{{ site.github_url }}" target="_blank">GitHub</a>{% endif %}
+                <a href="https://x.com/mertnesvat" target="_blank">X</a>
+                <a href="https://rumibreathing.com" target="_blank">Rumi Breathing</a>
+            </div>
         </div>
     </div>
 
