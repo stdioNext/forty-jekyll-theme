@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "site": "studionext-links",
+    "public": "firebase-public",
+    "ignore": ["**/.*"],
+    "redirects": [
+      {
+        "source": "/stencil",
+        "destination": "instagram://external_browser?url=https://apps.apple.com/us/app/stencil-draw-with-guidelines/id1553707162",
+        "type": 302
+      },
+      {
+        "source": "/stencil-appstore",
+        "destination": "itms-appss://apps.apple.com/us/app/stencil-draw-with-guidelines/id1553707162",
+        "type": 302
+      }
+    ]
+  }
+}

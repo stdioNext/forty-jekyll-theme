@@ -16,5 +16,10 @@ tiktok_url: https://www.tiktok.com/@mertbuilds
 # build settings
 markdown: kramdown
 
+exclude:
+  - firebase.json
+  - firebase-public
+  - firebase-debug.log
+
 sass:
   style: compressed

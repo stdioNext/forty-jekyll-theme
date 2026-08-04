@@ -51,7 +51,11 @@
 		<script>
 		(function () {
 			var APP_STORE_URL = 'https://apps.apple.com/us/app/stencil-draw-with-guidelines/id1553707162';
-			var ITMS_URL = 'itms-apps://apps.apple.com/us/app/stencil-draw-with-guidelines/id1553707162';
+			// Server-side 302 → instagram://external_browser?url=… — the webview only honors
+			// the scheme when it arrives as a redirect Location header, not from script.
+			var ESCAPE_URL = 'https://studionext-links.web.app/stencil';
+			// Server-side 302 → itms-appss://… — forces the native App Store app.
+			var STORE_HOP_URL = 'https://studionext-links.web.app/stencil-appstore';
 
 			var ua = navigator.userAgent || '';
 			var inInstagram = /Instagram/i.test(ua);
@@ -69,8 +73,10 @@
 				return;
 			}
 
-			// Undocumented deep link: Instagram opens the URL in the device's default browser.
-			attempt('instagram://external_browser?url=' + encodeURIComponent(APP_STORE_URL), 0);
+			// A tapped link is the most reliable escape of all, so the button rides the 302 too.
+			document.getElementById('store-button').href = ESCAPE_URL;
+
+			attempt(ESCAPE_URL, 0);
 
 			if (isAndroid) {
 				attempt(
@@ -78,14 +84,13 @@
 					'#Intent;scheme=https;action=android.intent.action.VIEW;' +
 					'category=android.intent.category.BROWSABLE;' +
 					'S.browser_fallback_url=' + encodeURIComponent(APP_STORE_URL) + ';end',
-					1000
+					1800
 				);
 			} else {
-				// Forces the native App Store app even inside the webview.
-				attempt(ITMS_URL, 1000);
+				attempt(STORE_HOP_URL, 1800);
 			}
 
-			attempt(APP_STORE_URL, 2200);
+			attempt(APP_STORE_URL, 3600);
 		})();
 		</script>
 	</body>
