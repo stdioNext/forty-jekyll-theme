@@ -1,0 +1,214 @@
+/* Lento's pages on studionext.co.uk: privacy, terms, support. Lento's own night palette; the one moving thing is the
+   app's breathing orb (40% in, 10% hold, 50% out over ten seconds, as in the app), still for reduced motion. */
+
+:root {
+	--night: #05070d;
+	--midnight: #0b1222;
+	--panel: rgba(20, 31, 54, 0.55);
+	--hairline: rgba(169, 180, 204, 0.16);
+	--text: #f4f6fb;
+	--mist: #a9b4cc;
+	--quiet: #8892a7;
+	--tide: #5b8cff;
+	--tide-soft: #9ec2ff;
+	--serif: "New York", ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+	--sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+	--rounded: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif;
+	color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: var(--night);
+	background-image:
+		radial-gradient(90% 46rem at 18% -12rem, rgba(91, 140, 255, 0.20), transparent 70%),
+		linear-gradient(180deg, var(--midnight) 0, var(--night) 38rem);
+	background-repeat: no-repeat;
+	color: var(--text);
+	font: 17px/1.65 var(--sans);
+	-webkit-font-smoothing: antialiased;
+}
+
+.page {
+	max-width: 42rem;
+	margin: 0 auto;
+	padding: 3.5rem 1.25rem 4rem;
+}
+
+/* The header: the orb breathing beside the wordmark. */
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 3rem;
+	color: inherit;
+	text-decoration: none;
+	width: fit-content;
+	border-radius: 999px;
+}
+
+.orb {
+	width: 4.5rem;
+	height: 4.5rem;
+	flex: none;
+	display: block;
+	transform-origin: 50% 50%;
+	filter: drop-shadow(0 0 1.1rem rgba(92, 225, 230, 0.28));
+	animation: breathe 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes breathe {
+	0% { transform: scale(0.78); filter: drop-shadow(0 0 0.6rem rgba(92, 225, 230, 0.18)); }
+	40% { transform: scale(1); filter: drop-shadow(0 0 1.4rem rgba(92, 225, 230, 0.38)); }
+	50% { transform: scale(1); filter: drop-shadow(0 0 1.4rem rgba(92, 225, 230, 0.38)); }
+	100% { transform: scale(0.78); filter: drop-shadow(0 0 0.6rem rgba(92, 225, 230, 0.18)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.orb { animation: none; transform: scale(0.92); }
+}
+
+.wordmark {
+	display: block;
+	font: 600 1.6rem/1 var(--rounded);
+	letter-spacing: 0.01em;
+}
+
+.maker {
+	display: block;
+	margin-top: 0.35rem;
+	font-size: 0.875rem;
+	color: var(--mist);
+}
+
+/* Titles in New York, as Lento greets you in the app. */
+h1, h2, h3 {
+	font-family: var(--serif);
+	font-weight: 500;
+	color: var(--text);
+	text-wrap: balance;
+}
+
+h1 {
+	margin: 0;
+	font-size: clamp(2.4rem, 7vw, 3.25rem);
+	line-height: 1.08;
+	letter-spacing: -0.01em;
+}
+
+h1 + .lead { margin-top: 1.25rem; }
+
+.effective {
+	margin: 0.75rem 0 2.5rem;
+	color: var(--quiet);
+	font-size: 0.95rem;
+}
+
+h2 {
+	margin: 2.75rem 0 0.75rem;
+	font-size: 1.6rem;
+	line-height: 1.2;
+}
+
+h3 {
+	margin: 1.75rem 0 0.5rem;
+	font-size: 1.2rem;
+	line-height: 1.3;
+}
+
+p, ul { margin: 0 0 1rem; }
+
+p, li { max-width: 66ch; }
+
+.lead {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	color: var(--text);
+}
+
+ul { padding-left: 1.25rem; }
+
+li { margin: 0 0 0.5rem; }
+
+li::marker { color: var(--tide); }
+
+strong { font-weight: 600; }
+
+a {
+	color: var(--tide-soft);
+	text-decoration-color: rgba(158, 194, 255, 0.4);
+	text-underline-offset: 0.18em;
+	text-decoration-thickness: 1px;
+}
+
+a:hover { text-decoration-color: currentColor; }
+
+a:focus-visible {
+	outline: 2px solid var(--tide-soft);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+/* The one panel: the short version of the privacy policy, read before the details. */
+.in-short {
+	margin: 0 0 2.5rem;
+	padding: 1.5rem 1.5rem 0.75rem;
+	background: var(--panel);
+	border: 1px solid var(--hairline);
+	border-radius: 1.25rem;
+}
+
+.in-short h2 { margin-top: 0; font-size: 1.3rem; }
+
+.in-short ul { padding-left: 1.1rem; }
+
+/* Questions on the support page: the question in the serif, the answer below it. */
+.faq h3 { margin-top: 2rem; }
+
+.contact {
+	margin: 0 0 1rem;
+	font-size: 1.15rem;
+}
+
+footer {
+	margin-top: 4rem;
+	padding-top: 1.75rem;
+	border-top: 1px solid var(--hairline);
+	color: var(--quiet);
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+
+footer nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1.25rem;
+}
+
+footer nav li { margin: 0; }
+
+footer nav a { color: var(--mist); }
+
+footer nav a[aria-current="page"] {
+	color: var(--text);
+	text-decoration: none;
+}
+
+footer p { margin: 0 0 0.4rem; max-width: none; }
+
+@media (max-width: 30rem) {
+	body { font-size: 16px; }
+	.page { padding-top: 2.5rem; }
+	.brand { margin-bottom: 2.25rem; }
+	.orb { width: 3.75rem; height: 3.75rem; }
+	h2 { font-size: 1.45rem; }
+	.in-short { padding: 1.25rem 1.1rem 0.5rem; }
+}
